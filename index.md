@@ -11,7 +11,7 @@ A bearer token is a long string of letters and numbers used to authenticate your
 3. Go to the "console" tab
 4. paste this code into the console:
 ```js
-console.log(`; ${document.cookie}\`.split(`; bearer_token=`).pop().split(';').shift())
+console.log(`; ${document.cookie}`.split(`; bearer_token=`).pop().split(';').shift())
 ```
 6. copy the bearer token that it shows in the console
 
