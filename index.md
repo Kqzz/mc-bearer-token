@@ -6,7 +6,7 @@ A bearer token is a long string of letters and numbers used to authenticate your
 
 ## Get your bearer token
 
-1. Sign in to your Minecraft account
+1. Sign in to your Minecraft account at [minecraft.net](https://minecraft.net)
 2. open the chrome / firefox dev tools (ctrl + shift + i) _or_ right click and click inspect
 3. Go to the "console" tab
 4. paste this code into the console:
