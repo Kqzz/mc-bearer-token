@@ -14,3 +14,7 @@ A bearer token is a long string of letters and numbers used to authenticate your
 console.log(`; ${document.cookie}\`.split(`; bearer_token=`).pop().split(';').shift())
 ```
 6. copy the bearer token that it shows in the console
+
+You now have your minecraft account's bearer token.
+
+**IMPORTANT: if you give someone this token they basically have full control of your minecraft account. They could change the password.**
