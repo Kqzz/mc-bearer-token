@@ -2,4 +2,4 @@
 
 guide to get your Minecraft bearer token:
 
-kqzz.github.io/mc-bearer-token
+https://kqzz.github.io/mc-bearer-token
