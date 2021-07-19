@@ -5,7 +5,7 @@
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
             @import url('https://fonts.googleapis.com/css?family=Roboto');
             @import url('https://fonts.googleapis.com/css?family=Anton');
-        
+
             body {
                 padding: 20px;
                 background-color: #282c34;
@@ -16,40 +16,40 @@
                 margin: 0 auto;
                 max-width: 960px;
             }
-        
+
             pre {
                 color: #ecbe7b;
             }
-        
+
             blockquote {
                 color: #ecbe7b;
             }
-        
+
             a {
                 color: #c678dd;
                 text-decoration: none;
             }
-        
+
             a:hover {
                 color: #51afef;
             }
-        
+
             h1 {
                 font-size: 20px;
                 color: #ff6c6b;
                 margin-bottom: 0px;
             }
-        
+
             h2, h3, h4, h5, h6 {
                 font-size: 16px;
                 color: #51afef;
                 margin-bottom: 0px;
             }
-        
+
             li {
                 color: #98be65;
             }
-        
+
             code {
                 background-color: #4d5054;
                 color: white;
@@ -57,7 +57,7 @@
                 padding: 2px;
                 padding-left: 5px;
                 padding-right: 5px;
-        
+
             }
         footer {
             border-left: 3px solid #4c5054;
@@ -77,8 +77,8 @@
         <li>Sign in to your Minecraft account at <a href="https://minecraft.net">minecraft.net</a></li>
         <li>open the chrome / firefox dev tools (ctrl + shift + i) <em>or</em> right click and click inspect</li>
         <li>Go to the &quot;console&quot; tab</li>
-        <li>paste this code into the console:<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`; <span class="hljs-subst">${<span class="hljs-built_in">document</span>.cookie}</span>`</span>.split(<span class="hljs-string">`; bearer_token=`</span>).pop().split(<span class="hljs-string">';'</span>).shift())
-</code></pre>
+        <li>Paste this code into the console:<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`; <span class="hljs-subst">${<span class="hljs-built_in">document</span>.cookie}</span>`</span>.split(<span class="hljs-string">`; bearer_token=`</span>).pop().split(<span class="hljs-string">';'</span>).shift())
+</code></pre> Or alternatively drag <a href="javascript:console.log(`; ${document.cookie}`.split(`; bearer_token=`).pop().split(';').shift())">this text</a> to your browser's URL shortcuts bar, and click it.
         </li>
         <li>copy the bearer token that it shows in the console</li>
     </ol>
