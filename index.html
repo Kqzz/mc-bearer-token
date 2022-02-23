@@ -1,91 +1,170 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-            @import url('https://fonts.googleapis.com/css?family=Roboto');
-            @import url('https://fonts.googleapis.com/css?family=Anton');
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url('https://fonts.googleapis.com/css?family=Anton');
 
-            body {
-                padding: 20px;
-                background-color: #282c34;
-                color: #dfdfdf;
-                font-family: "Roboto Mono";
-                font-size: 14px;
-                line-height: 22px;
-                margin: 0 auto;
-                max-width: 960px;
-            }
+        body {
+            padding: 20px;
+            background-color: #282c34;
+            color: #dfdfdf;
+            font-family: "Roboto Mono";
+            font-size: 14px;
+            line-height: 22px;
+            margin: 0 auto;
+            max-width: 960px;
+        }
 
-            pre {
-                color: #ecbe7b;
-            }
+        pre {
+            color: #ecbe7b;
+        }
 
-            blockquote {
-                color: #ecbe7b;
-            }
+        blockquote {
+            color: #ecbe7b;
+        }
 
-            a {
-                color: #c678dd;
-                text-decoration: none;
-            }
+        a {
+            color: #c678dd;
+            text-decoration: none;
+        }
 
-            a:hover {
-                color: #51afef;
-            }
+        a:hover {
+            color: #51afef;
+        }
 
-            h1 {
-                font-size: 20px;
-                color: #ff6c6b;
-                margin-bottom: 0px;
-            }
+        h1 {
+            font-size: 20px;
+            color: #ff6c6b;
+            margin-bottom: 0px;
+        }
 
-            h2, h3, h4, h5, h6 {
-                font-size: 16px;
-                color: #51afef;
-                margin-bottom: 0px;
-            }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 16px;
+            color: #51afef;
+            margin-bottom: 0px;
+        }
 
-            li {
-                color: #98be65;
-            }
+        li {
+            color: #98be65;
+        }
 
-            code {
-                background-color: #434852;
-                color: white;
-                border-radius: 3px;
-                padding: 2px;
-                padding-left: 5px;
-                padding-right: 5px;
+        #codeWrapper {
+            margin: 0.5rem 0;
+            align-items: center;
+            display: flex;
+        }
 
-            }
+        code {
+            background-color: #434852;
+            color: white;
+            border-radius: 3px;
+            padding: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
+
+        }
+
         footer {
             border-left: 3px solid #4c5054;
             padding-left: 10px;
             padding-top: 5px;
             padding-bottom: 5px;
         }
+
+
+        #codeWrapper i {
+            font-size: 1rem;
+            user-select: none;
+            margin-left: 0.2rem;
+            color: #fff;
+            background: #434852;
+            padding: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #codeWrapper i:hover {
+            transition: background 0.25s ease-in-out;
+            background: #98be65;
+
+        }
+
+        #code {
+            text-align: center;
+            width: auto;
+            background-color: #434852;
+            color: white;
+            border-radius: 3px;
+            padding: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-family: "Roboto Mono";
+        }
     </style>
 </head>
 
 <body>
-    <h1 id="how-to-get-your-minecraft-bearer-token">How to get your Minecraft bearer token</h1>
-    <h2 id="what-is-a-minecraft-bearer-token-">What is a Minecraft bearer token?</h2>
-    <p>A bearer token is a long string of letters and numbers used to authenticate your account with their private API.</p>
-    <p>NOTE: Bearer tokens only last<strong>24 hours</strong>.</p>
-    <h2 id="get-your-bearer-token">Get your bearer token</h2>
-    <ol>
-        <li>Sign in to your Minecraft account at <a href="https://minecraft.net">minecraft.net</a></li>
-        <li>Open the Chrome / Firefox developer tools (ctrl + shift + i) <em>or</em> right click and click inspect</li>
-        <li>Go to the &quot;console&quot; tab</li>
-        <li>Paste this code into the console:<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`; <span class="hljs-subst">${<span class="hljs-built_in">document</span>.cookie}</span>`</span>.split(<span class="hljs-string">`; bearer_token=`</span>).pop().split(<span class="hljs-string">';'</span>).shift())
-</code></pre> Or, alternatively, drag <a href="javascript:console.log(`; ${document.cookie}`.split(`; bearer_token=`).pop().split(';').shift())">this text</a> to your browser's URL shortcuts bar, and click it.
+    <h1 id="how-to-get-your-minecraft-bearer-token">
+        How to get your Minecraft bearer token
+    </h1>
+    <h2 id="what-is-a-minecraft-bearer-token-">
+        What is a Minecraft bearer token?
+    </h2>
+    <p>
+        A bearer token is a long string of letters and numbers used to authenticate your account with their private API.
+    </p>
+    <p>
+        NOTE: Bearer tokens only last <b>24 hours</b>.
+    </p>
+    <h2 id="get-your-bearer-token">
+        Get your bearer token
+
+    </h2>
+    <ul>
+        <li>
+            Sign in to your Minecraft account at
+            <a href="https://minecraft.net">minecraft.net</a>
+        </li>
+        <li>
+            Open the Chrome / Firefox developer tools (<b>ctrl + shift + i</b> or <b>f12</b>) <em>or</em> right click
+            and click <b>inspect element</b>
+        </li>
+        <li>
+            Go to the &quot;console&quot; tab
+
+        </li>
+        <li>Paste this code into the console:
+            <div id="codeWrapper">
+                <div id="code">console.log(`; ${document.cookie}`.split('; bearer_token=').pop().split(';').shift())
+                </div>
+                <i class="material-icons">content_copy</i>
+            </div>
+            <!-- <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`; <span class="hljs-subst">${<span class="hljs-built_in">document</span>.cookie}</span>`</span>.split(<span class="hljs-string">`; bearer_token=`</span>).pop().split(<span class="hljs-string">';'</span>).shift())
+</code></pre> -->
+            Or, alternatively, drag <a
+                href="javascript:console.log(`; ${document.cookie}`.split(`; bearer_token=`).pop().split(';').shift())">this
+                text</a> to your browser's URL shortcuts bar, and click it.
         </li>
         <li>Copy the bearer token that it shows in the console</li>
-    </ol>
+    </ul>
     <p>You now have your minecraft account&#39;s bearer token.</p>
-    <p><strong>IMPORTANT: if you give someone this token they basically have full control of your minecraft account. They could change the password.</strong></p>
-    <footer>This page is made by Kqzz with source code available <a href="https://github.com/Kqzz/mc-bearer-token">here</a></footer>
+    <p><b>IMPORTANT: if you give someone this token they basically have full control of your Minecraft account.
+            They could even change the password.</b></p>
+    <footer>This page is made by Kqzz with source code available <a
+            href="https://github.com/Kqzz/mc-bearer-token">here</a></footer>
+    <script>
+        document.querySelector('.material-icons').addEventListener('click', () => {
+            navigator.clipboard.writeText(document.querySelector('#code').innerHTML);
+        })
+    </script>
 </body>
 
 </html>
